@@ -2,12 +2,10 @@
 此文档非完整文档，`CProgTest`尚未完成，此文档与`CProgTest`源文件将不断更新。
 ## 概述
 `CProgTest`使用C语言编写，是C语言的命令行REPL。可以看到，它看起来很像`python3`：
-```
+```python
 $ python3
 Python 3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:20) [Clang 12.0.5 (clang-1205.0.22.11)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
-```
-```python
 >>> print("Hello!")
 Hello!
 >>> exit
