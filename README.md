@@ -26,13 +26,13 @@ exit
 $
 ```
 ## Source Input
-### One Line
+### Input One Line
 If you want to input one line, just input and wait a second, then you can see the output (or the error info)：
 ```C
 >>> int sum = 0;  // wait a few seconds ...
 >>>
 ```
-### Many Lines
+### Input Many Lines
 If `CProgTest` sees your source is not ended by `;`, `CProgTest` will think you are inputing many lines like `for` loop:
 ```C
 >>> int sum = 0;
