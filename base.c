@@ -44,3 +44,13 @@ int catch_signal(int sig, void (*handler)(int))
     action.sa_flags = 0;
     return sigaction(sig, &action, NULL);
 }
+
+int is_startswith(const char *str1, char *str2)
+{
+    int length = strlen(str1);
+    for (int i = 0; i < length; ++i) {
+        if (str1[i] != str2[i])
+            return 0;
+    }
+    return 1;
+}
