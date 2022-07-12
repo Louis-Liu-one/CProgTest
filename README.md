@@ -47,6 +47,7 @@ If `CProgTest` sees your source is not ended by `;`, `CProgTest` will think you 
 In many-lines mode, type <kbd>Enter</kbd> to input a new line, type two <kbd>Enter</kbd>s to stop input many lines and run it.
 ## How to Include a Header File
 Just type `#include <header-file.h>` and two <kbd>Enter</kbd>s in `CProgTest`, then you can include `header-file.h`. When `CProgTest` sees you input a source starts with `#include`, then it thinks you want to include a header file.
+`CProgTest` will include `stdio.h` first because it's very important. Some frequently-used functions like `printf` are in `stdio.h`. You can do not include `stdio.h` and use these functions.
 ```C
 >>> #include <stdlib.h>  // Include stdlib.h
 ...
@@ -57,6 +58,13 @@ Just type `#include <header-file.h>` and two <kbd>Enter</kbd>s in `CProgTest`, t
 >>> free(p);
 >>>
 ```
-`#include` cannot use in many-lines mode.
+### `#include` in Many-Lines Mode
+`#include` cannot use in many-lines mode, except this situation:
+```C
+>>> #include <stdlib.h>
+... #include <string.h>
+...
+>>>
+```
 ## How to Quit
 Input `@exit`+<kbd>Enter</kbd>+<kbd>Enter</kbd> or type <kbd>Ctrl</kbd>+<kbd>C</kbd> to quit.
