@@ -1,5 +1,5 @@
 # CProgTest - Type C Source in Command Line
-*Comment*: This document is incomplete,`CProgTest` is incomplete too. This document and `CProgTest` sources will still update.
+*Comment: This document is incomplete,`CProgTest` is incomplete too. This document and `CProgTest` sources will still update.*
 ## Abstract
 `CProgTest` is coding by C Programming Language, it's a C's REPL. You see, it looks like `python3`:
 ```python
@@ -11,6 +11,7 @@ Hello!
 >>> exit
 Use exit() or Ctrl-D (i.e. EOF) to exit
 >>> exit()
+$
 ```
 ```C
 $ ./CProgTest
