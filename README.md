@@ -26,7 +26,7 @@ $ ./CProgTest
 exit
 $
 ```
-## Source Input
+## Normal Source Input
 ### Input One Line
 If you want to input one line, just input and wait a second, then you can see the output (or the error info)：
 ```C
@@ -40,8 +40,23 @@ If `CProgTest` sees your source is not ended by `;`, `CProgTest` will think you 
 >>> for (int i = 0; i < 101; ++i)  // a for loop is not end of `;`
 ...     sum += i;
 ...
+>>> printf("%i\n", sum);
+5050
 >>>
 ```
 In many-lines mode, type <kbd>Enter</kbd> to input a new line, type two <kbd>Enter</kbd>s to stop input many lines and run it.
+## How to Include a Header File
+Just type `#include <header-file.h>` and two <kbd>Enter</kbd>s in `CProgTest`, then you can include `header-file.h`. When `CProgTest` sees you input a source starts with `#include`, then it thinks you want to include a header file.
+```C
+>>> #include <stdlib.h>  // Include stdlib.h
+...
+>>> #include <string.h>  // Include string.h
+...
+>>> char *p = (char *)malloc(100);  // The function malloc needs stdlib.h
+>>> memset(p, 0, 100);  // The function memset needs string.h
+>>> free(p);
+>>>
+```
+`#include` cannot use in many-lines mode.
 ## How to Quit
 Input `@exit`+<kbd>Enter</kbd>+<kbd>Enter</kbd> or type <kbd>Ctrl</kbd>+<kbd>C</kbd> to quit.
