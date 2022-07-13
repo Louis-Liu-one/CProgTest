@@ -22,7 +22,6 @@ $ ./CProgTest
 >>> printf("%i\n", sum);
 5050
 >>> @exit
-...
 exit
 $
 ```
