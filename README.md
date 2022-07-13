@@ -71,8 +71,8 @@ The magic methods in `CProgTest` is always start with `@`. They can do something
 | Magic method | Meaning          |
 |:------------:|:---------------- |
 | `@exit`      | Quit the program |
-### Magic methods `@exit`
-You can use magic methods `@exit` to quit `CProgTest`. It will raise `SIGINT` signal. Like this:
+### Magic method `@exit`
+You can use magic method `@exit` to quit `CProgTest`. It will raise `SIGINT` signal. Like this:
 ```C
 >>> @exit
 exit
@@ -81,7 +81,7 @@ $
 You can also type <kbd>Ctrl</kbd>+<kbd>C</kbd> to quit.
 
 *Comment: The magic method function is incomplete. The magic method function **only** has `@exit`. It will update soon.*
-## Known BUG
+## Known BUGs
 ### `printf`
 If you type two `printf`s in `CProgTest`, your program will look strange like this:
 ```C
