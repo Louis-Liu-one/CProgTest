@@ -24,6 +24,14 @@ char *input_manylines()
     memset(inputs, 0, 1024);
     input(">>> ", firstinputline);
     sprintf(inputs, "%s", firstinputline);
+    magic_method magic_method_no = magic_method_getter(inputs);
+    if (magic_method_no != NONE) {
+        free(firstinputline);
+        free(input_line);
+        magic_method_runner(magic_method_no);
+        memset(inputs, 0, 1024);
+        return inputs;
+    }
     if (firstinputline[strlen(firstinputline) - 1] != ';') {
         input("... ", input_line);
         while (input_line[0] != '\0') {

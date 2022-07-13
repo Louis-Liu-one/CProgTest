@@ -43,7 +43,8 @@ int main()
     sprintf(includes, "%s\n", "#include <stdio.h>");
 
     catch_signal(SIGINT, cleanup);
-    while (strcmp((input_line = input_manylines()), "@exit") != 0) {
+    while (true) {
+        input_line = input_manylines();
         sprintf(lastone_inputs, "%s", inputs);
         sprintf(lastone_inmain, "%s", inmain);
         sprintf(lastone_includes, "%s", includes);
