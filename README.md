@@ -1,7 +1,7 @@
 # CProgTest - Type C Source in Command Line
 *Comment: This document is incomplete,`CProgTest` is incomplete too. This document and `CProgTest` sources will still update.*
 ## Abstract
-`CProgTest` is coding by C Programming Language, it's a C's REPL. You see, it looks like `python3`:
+`CProgTest` (C Program Tester) is coding by C Programming Language, it's a C's REPL. You see, it looks like `python3`:
 ```python
 $ python3
 Python 3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:20) [Clang 12.0.5 (clang-1205.0.22.11)] on darwin
