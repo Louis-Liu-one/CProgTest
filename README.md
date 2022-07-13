@@ -67,5 +67,30 @@ Just type `#include <header-file.h>` and two <kbd>Enter</kbd>s in `CProgTest`, t
 ...
 >>>
 ```
-## How to Quit
-Input `@exit`+<kbd>Enter</kbd>+<kbd>Enter</kbd> or type <kbd>Ctrl</kbd>+<kbd>C</kbd> to quit.
+## Magic Methods
+The magic methods in `CProgTest` is always start with `@`. They can do something *like a magic*. They are very useful:
+| Magic method | Meaning          |
+|:------------:|:---------------- |
+| `@exit`      | Quit the program |
+### Magic methods `@exit`
+You can use magic methods `@exit` to quit `CProgTest`. It will raise `SIGINT` signal. Like this:
+```C
+>>> @exit
+exit
+$
+```
+You can also type <kbd>Ctrl</kbd>+<kbd>C</kbd> to quit.
+
+*Comment: The magic method function is incomplete. The magic method function **only** has `@exit`. It will update soon.*
+## Known BUG
+### `printf`
+If you type two `printf`s in `CProgTest`, your program will look strange like this:
+```C
+>>> printf("A: Hello world!\n");
+A: Hello world!
+>>> printf("B: Hello world!\n");
+A: Hello world!
+B: Hello world!
+>>>
+```
+`CProgTest` get your inputs and write into a file. Then it will compile and run it. So if you type two `printf`s, `CProgTest` will write two `printf`s into the file. Then you will see two `printf`s' result. `CProgTest` will add a magic method named `@getvar` to repair this BUG.
