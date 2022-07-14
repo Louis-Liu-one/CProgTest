@@ -3,6 +3,7 @@
 
 char *inmain, *outofmain, *includes, *inputs, *input_line;
 char *lastone_inmain, *lastone_inputs, *lastone_includes;
+char *writenow;
 
 void cleanup(int sig)
 {
@@ -30,6 +31,7 @@ int main()
     lastone_inputs = (char *)malloc(4532);
 
     FILE *ctestfile;
+    writenow = inmain;
 
     memset(inmain, 0, 2048);
     memset(outofmain, 0, 2048);
@@ -51,7 +53,7 @@ int main()
         if (is_startswith("#include", input_line) == 1)
             sprintf(includes, "%s%s\n", includes, input_line);
         else
-            sprintf(inmain, "%s%s\n", inmain, input_line);
+            sprintf(writenow, "%s%s\n", writenow, input_line);
         sprintf(inputs, "%s%sint main() {\n%s}", includes, outofmain, inmain);
         ctestfile = fopen("testfile.c", "w");
         fprintf(ctestfile, "%s", inputs);
