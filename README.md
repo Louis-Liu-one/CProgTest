@@ -93,3 +93,19 @@ B: Hello world!
 >>>
 ```
 `CProgTest` get your inputs and write into a file. Then it will compile and run it. So if you type two `printf`s, `CProgTest` will write two `printf`s into the file. Then you will see two `printf`s' result. `CProgTest` will add a magic method named `@getvar` to repair this BUG.
+## Download
+Download this package and type `make` in command line, then you can use `CProgTest` in your computer.
+```bash
+$ cd CProgTest/
+$ make
+gcc -c CProgTest.c
+gcc -c base.c
+gcc -c magic-method.c
+gcc CProgTest.o base.o magic-method.o -o CProgTest
+$ make clean
+rm *.o
+$ ./CProgTest
+>>> @exit
+exit
+$
+```
